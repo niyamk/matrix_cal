@@ -19,11 +19,15 @@
         
         <div class="matrix-wrapper">
             <div id="matrixA"></div>
-            <div id="matrixB"></div>
+            <div id="matrixB"></div> <!-- This will be hidden dynamically -->
             <div class="btn-container">
-                <select id="operation">
-                    <option value="add">Addition</option>
-                    <option value="subtract">Subtraction</option>
+                <select id="operation" onchange="toggleMatrixB()">
+                    <option value="add">Addition (A + B)</option>
+                    <option value="subtract">Subtraction (A - B)</option>
+                    <option value="multiply">Multiplication (A × B)</option>
+                    <option value="transposeA">Transpose (Aᵀ)</option>
+                    <option value="determinantA">Determinant |A|</option>
+                    <option value="identityA">Check if A is Identity</option>
                 </select>
                 <button onclick="calculate()">Output</button>
             </div>
